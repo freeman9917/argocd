@@ -1,10 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
-  namespace: my-namespace
+  name: {{ .Release.Name }}-deployment
   labels:
-    app: web
+    app: {{ .Release.Name }}-deployment
 spec:
   selector:
     matchLabels:
