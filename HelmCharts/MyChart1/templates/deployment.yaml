@@ -1,21 +1,22 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-deployment
+  name: my-app-deployment
+  namespace: my-namespace
   labels:
-    app : {{ .Release.Name }}-deployment
+    app: web
 spec:
-  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      project: {{ .Release.Name }}
+      app: web
+  replicas: 1
   template:
     metadata:
       labels:
-        project: {{ .Release.Name }}   # Service will look for those PODS Labels!!!
+        app: web
     spec:
       containers:
-        - name : {{ .Release.Name }}-web
-          image: {{ .Values.container.image }}
+        - name: my-app
+          image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr:latest
           ports:
-            - containerPort: 80
+          - containerPort: 3000
