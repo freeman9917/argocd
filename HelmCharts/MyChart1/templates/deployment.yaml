@@ -7,15 +7,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: web
-  replicas: 1
+      app: {{ .Release.Name }}
+  replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        app: web
+        app: {{ .Rlease.Name }}
     spec:
       containers:
-        - name: my-app
-          image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr:latest
+        - name: {{ .Release.Name }}-web
+          image: {{ .Values.container.image }}
           ports:
           - containerPort: 3000
