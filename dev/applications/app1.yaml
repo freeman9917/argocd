@@ -1,1 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name     : myapp1
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name     : in-cluster
+    namespace: app1
+  source:
+    path   : "HelmCharts/MyChart1"
+    repoURL: "https://github.com/freeman9917/argocd.git"
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - prod_values.yaml
+      parameters:
+      - name: "container.image"
+        value: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr:latest
 
+  project: default
+  syncPolicy:
+    automated:
+      prune   : true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true         
