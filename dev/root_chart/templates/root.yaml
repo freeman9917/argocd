@@ -9,7 +9,7 @@ spec:
     namespace: default
   source:
     repoURL: "https://github.com/freeman9917/argocd.git"
-    path: "prod/applications"
+    path: "dev/applications"
     targetRevision: "HEAD"
   project: default
   syncPolicy:
