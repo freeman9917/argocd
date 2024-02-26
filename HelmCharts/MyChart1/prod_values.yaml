@@ -1,6 +1,6 @@
 # Overwrite values.yaml for my Helm Chart
 
 container:
-  image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr:latest
+  image: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr:latest
 
 replicaCount: 1
