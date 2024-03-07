@@ -1,6 +1,6 @@
 # Default Values for my Helm Chart
 
 container:
-  image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr
+  image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr:1.2.3
 
 replicaCount: 1
