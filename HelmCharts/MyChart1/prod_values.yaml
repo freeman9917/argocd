@@ -1,6 +1,0 @@
-# Overwrite values.yaml for my Helm Chart
-
-container:
-  image: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
-
-replicaCount: 1
