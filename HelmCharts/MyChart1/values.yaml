@@ -1,7 +1,12 @@
 # Default Values for my Helm Chart
-
-container:
-  image: ""
+image:
+  repository: ""
+  # Overrides the image tag whose default is the chart appVersion.
   tag: ""
+
+
+# container:
+#   image: ""
+#   tag: ""
 
 replicaCount: 1
