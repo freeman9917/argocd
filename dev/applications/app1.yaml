@@ -19,7 +19,7 @@ spec:
       parameters:
       - name: "image.repository"
         value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
-      - name: "container.tag"
+      - name: "image.tag"
         value: v0.1.0
 
   project: default
