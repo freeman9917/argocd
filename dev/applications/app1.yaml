@@ -18,7 +18,9 @@ spec:
     helm:
       parameters:
       - name: "container.image"
-        value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr:v0.1
+        value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
+      - name: "container.tag"
+        value: v0.1
 
   project: default
   syncPolicy:
