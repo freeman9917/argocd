@@ -13,7 +13,7 @@ spec:
     namespace: app1
   source:
     path   : "HelmCharts/MyChart1"
-    repoURL: "ssh://github.com/freeman9917/argocd.git"
+    repoURL: "https://github.com/freeman9917/argocd.git"
     targetRevision: HEAD
     helm:
       parameters:
