@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: my-ecr:~v0.4
+    argocd-image-updater.argoproj.io/write-back-method: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
