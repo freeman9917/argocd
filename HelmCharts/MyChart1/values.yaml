@@ -2,5 +2,6 @@
 
 container:
   image: 548844171305.dkr.ecr.ap-south-1.amazonaws.com/brainscale-ecr
+  tag: ""
 
 replicaCount: 1
