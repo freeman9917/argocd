@@ -16,8 +16,6 @@ spec:
     repoURL: "https://github.com/freeman9917/argocd.git"
     targetRevision: HEAD
     helm:
-      valueFiles:
-      - prod_values.yaml
       parameters:
       - name: "container.image"
         value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr:v0.1
