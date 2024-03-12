@@ -4,7 +4,7 @@ helm:
     value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
     forcestring: false
   - name: image.tag
-    value: v0.4.3
+    value: v0.4.4
     forcestring: true
   - name: image.name
     value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
