@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: my-app=013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr:~v0.4
+    argocd-image-updater.argoproj.io/write-back-method: git
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -20,7 +21,7 @@ spec:
       - name: "image.repository"
         value: 013273876354.dkr.ecr.eu-central-1.amazonaws.com/my-ecr
       - name: "image.tag"
-        value: ""
+        value: "v0.1.0"
 
   project: default
   syncPolicy:
